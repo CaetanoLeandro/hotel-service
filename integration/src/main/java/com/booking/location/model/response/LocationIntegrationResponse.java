@@ -3,34 +3,45 @@ package com.booking.location.model.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 public class LocationIntegrationResponse {
 
     @JsonProperty(value = "city_ufi")
-    public int cityUfi;
-//    public BMaxLosData b_max_los_data;
-    public String lc;
-    public int hotels;
-    public String timezone;
+    private Integer cityUfi;
+    @JsonProperty(value = "b_max_los_data")
+    private SearchLocationResponse bMaxLosData;
+    private String lc;
+    private Integer hotels;
+    private String timezone;
     @JsonProperty(value = "image_url")
-    public String imageUrl;
-    public String region;
-    public String country;
+    private String imageUrl;
+    private String region;
+    private String country;
     @JsonProperty(value = "dest_id")
-    public String destId;
-    public double longitude;
+    private String destId;
+    private Double longitude;
     @JsonProperty(value = "landmark_type")
-    public int landmarkType;
-    public double latitude;
-    public String label;
+    private Integer landmarkType;
+    private Double latitude;
+    private String label;
     @JsonProperty(value = "city_name")
-    public String cityName;
+    private String cityName;
     @JsonProperty(value = "dest_type")
-    public String destType;
+    private String destType;
     @JsonProperty(value = "nr_hotels")
-    public int nrHotels;
-    public String name;
-    public String type;
-    public String cc1;
-    public int rtl;
+    private Integer nrHotels;
+    private String name;
+    private String type;
+    private String cc1;
+    private Integer rtl;
 
 }
