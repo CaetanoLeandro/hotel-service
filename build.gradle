@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-mainClassName="com.booking.hotelservice.HotelServiceApplication"
+mainClassName="com.booking.HotelServiceApplication"
 
 dependencies{
 	implementation project(':contract')
@@ -12,11 +12,8 @@ dependencies{
 
 allprojects {
 
-	repositories {
-		mavenCentral()
-	}
-
 	apply plugin: 'java'
+	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
 
 	group = 'com.booking'
