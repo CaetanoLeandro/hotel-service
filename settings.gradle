@@ -1,0 +1,5 @@
+rootProject.name = 'hotel-service'
+include 'contract'
+include 'integration'
+include 'impl'
+
