@@ -1,1 +1,3 @@
-implementation project(':integration')
+dependencies{
+    implementation project(':integration')
+}

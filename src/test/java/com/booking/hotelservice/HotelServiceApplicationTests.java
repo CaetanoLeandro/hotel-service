@@ -1,4 +1,4 @@
-package com.booking.hotelservice;
+/*package com.booking.hotelservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,3 +11,5 @@ class HotelServiceApplicationTests {
 	}
 
 }
+
+ */
