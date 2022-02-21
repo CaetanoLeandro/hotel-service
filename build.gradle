@@ -1,43 +1,56 @@
 plugins {
 	id 'org.springframework.boot' version '2.6.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'application'
 	id 'java'
 }
 
-group = 'com.booking'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+mainClassName="com.booking.hotelservice.HotelServiceApplication"
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
+dependencies{
+	implementation project(':contract')
+}
+
+allprojects {
+
+	apply plugin: 'java'
+	apply plugin: 'io.spring.dependency-management'
+
+	group = 'com.booking'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '17'
+
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
 	}
-}
 
-repositories {
-	mavenCentral()
-}
-
-ext {
-	set('springCloudVersion', "2021.0.1")
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.springframework.cloud:spring-cloud-starter-config'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'io.projectreactor:reactor-test'
-}
-
-dependencyManagement {
-	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	repositories {
+		mavenCentral()
 	}
-}
 
-tasks.named('test') {
-	useJUnitPlatform()
+	ext {
+		set('springCloudVersion', "2021.0.1")
+	}
+
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+		implementation 'org.springframework.boot:spring-boot-starter-webflux'
+		implementation 'org.springframework.cloud:spring-cloud-starter-config'
+		compileOnly 'org.projectlombok:lombok'
+		annotationProcessor 'org.projectlombok:lombok'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		testImplementation 'io.projectreactor:reactor-test'
+	}
+
+	dependencyManagement{
+		imports{
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		}
+	}
+
+	tasks.named('test') {
+		useJUnitPlatform()
+	}
 }
