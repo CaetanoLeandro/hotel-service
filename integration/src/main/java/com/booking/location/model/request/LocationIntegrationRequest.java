@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class LocationIntegrationRequest {
-
     private String locale;
     private String name;
 }
