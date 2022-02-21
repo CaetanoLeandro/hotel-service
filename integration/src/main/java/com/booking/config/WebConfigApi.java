@@ -1,4 +1,4 @@
-package webclient;
+package com.booking.config;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Configuration
 @AllArgsConstructor
-public class SearchLocationConfig {
+public class WebConfigApi {
 
     private final WebClient webClient;
 

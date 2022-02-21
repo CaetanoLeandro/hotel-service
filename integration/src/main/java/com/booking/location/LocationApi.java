@@ -1,14 +1,14 @@
-package consumer;
+package com.booking.location;
 
 import lombok.AllArgsConstructor;
-import model.LocationIntegrationRequest;
+import com.booking.location.model.request.LocationIntegrationRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
 @Component
-public class ConsumerApi {
+public class LocationApi {
 
     private final WebClient webClient;
 
