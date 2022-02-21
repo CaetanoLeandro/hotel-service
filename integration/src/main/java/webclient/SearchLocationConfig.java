@@ -10,14 +10,17 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Configuration
 @AllArgsConstructor
-public class SearchLocationIntegration {
+public class SearchLocationConfig {
+
+    private final WebClient webClient;
+
 
     @Bean
     public WebClient webClient(){
         return WebClient.builder()
                 .baseUrl("https://booking-com.p.rapidapi.com")
-                .defaultHeader("x-rapidapi-host: booking-com.p.rapidapi.com",
-                        "x-rapidapi-key: d9b7923726msha973cbca83399e5p163066jsne50cc763cc8b")
+                .defaultHeader("x-rapidapi-host, booking-com.p.rapidapi.com")
+                .defaultHeader("x-rapidapi-key, d9b7923726msha973cbca83399e5p163066jsne50cc763cc8b")
                 .defaultHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE)
                 .build();
     }
