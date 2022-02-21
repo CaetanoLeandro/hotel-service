@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-mainClassName="com.booking.hotelservice.HotelServiceApplication"
+mainClassName='com.booking.HotelServiceApplication'
 
 dependencies{
 	implementation project(':contract')
@@ -17,7 +17,17 @@ allprojects {
 	}
 
 	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
+
+	bootJar {
+		enabled = false
+	}
+
+	jar {
+		enabled = true
+	}
 
 	group = 'com.booking'
 	version = '0.0.1-SNAPSHOT'
