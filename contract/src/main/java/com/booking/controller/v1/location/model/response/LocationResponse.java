@@ -1,19 +1,20 @@
-package com.booking.entity;
+package com.booking.controller.v1.location.model.response;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Data
-@Document ("location")
-public class LocationEntity {
+@Builder
+
+public class LocationResponse {
     private String destId;
     private String label;
     private String region;
     private String cityName;
     private String country;
+
 }
