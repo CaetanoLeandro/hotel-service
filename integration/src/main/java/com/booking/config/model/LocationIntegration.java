@@ -1,4 +1,4 @@
-package model;
+package com.booking.config.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

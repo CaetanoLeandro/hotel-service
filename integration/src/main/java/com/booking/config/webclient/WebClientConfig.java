@@ -1,12 +1,12 @@
-package com.booking.config;
+package com.booking.config.webclient;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-@Service
+@Configuration
 public class WebClientConfig {
 
     @Bean
