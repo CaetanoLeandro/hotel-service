@@ -55,6 +55,7 @@ allprojects {
 		annotationProcessor 'org.projectlombok:lombok'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testImplementation 'io.projectreactor:reactor-test'
+		implementation "io.springfox:springfox-boot-starter:3.0.0"
 	}
 
 //	dependencyManagement{

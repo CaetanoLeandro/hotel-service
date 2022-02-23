@@ -1,4 +1,4 @@
-package com.booking.location.model.request;
+package com.booking.apis.searchlocation.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

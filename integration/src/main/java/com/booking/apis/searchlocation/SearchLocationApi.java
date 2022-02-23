@@ -1,8 +1,8 @@
-package com.booking.location;
+package com.booking.apis.searchlocation;
 
-import com.booking.location.model.response.SearchLocationResponse;
+import com.booking.apis.searchlocation.model.response.SearchLocationResponse;
 import lombok.AllArgsConstructor;
-import com.booking.location.model.request.SearchLocationRequest;
+import com.booking.apis.searchlocation.model.request.SearchLocationRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
