@@ -43,5 +43,4 @@ public class LocationController {
                         .locale(locale)
                         .build());
     }
-    @GetMapping()
 }
