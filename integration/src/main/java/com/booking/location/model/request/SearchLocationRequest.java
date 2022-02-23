@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class LocationIntegrationRequest {
+public class SearchLocationRequest {
     private String locale;
     private String name;
 
