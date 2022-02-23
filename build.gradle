@@ -2,6 +2,16 @@ plugins {
 	id 'org.springframework.boot' version '2.6.3'
 	id 'application'
 	id 'java'
+	id "org.asciidoctor.convert" version "1.5.9.2"
+	id 'jacoco'
+}
+
+jacocoTestReport {
+	afterEvaluate {
+		classDirectories.setFrom(files(classDirectories.files.collect {
+			fileTree(dir: it, exclude: ['src/main/java/com/booking/config'])
+		}))
+	}
 }
 
 mainClassName='com.booking.HotelServiceApplication'
@@ -55,6 +65,8 @@ allprojects {
 		annotationProcessor 'org.projectlombok:lombok'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testImplementation 'io.projectreactor:reactor-test'
+		implementation('io.springfox:springfox-swagger2:3.0.0')
+		implementation('io.springfox:springfox-swagger-ui:3.0.0')
 	}
 
 //	dependencyManagement{

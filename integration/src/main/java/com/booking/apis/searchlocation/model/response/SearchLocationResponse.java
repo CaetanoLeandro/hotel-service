@@ -1,4 +1,4 @@
-package com.booking.location.model.response;
+package com.booking.apis.searchlocation.model.response;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,28 +13,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SearchLocationResponse {
 
-    @JsonProperty(value = "city_ufi")
+    @JsonProperty("city_ufi")
     private Integer cityUfi;
 //    private BMaxLosData b_max_los_data;
     private String lc;
     private Integer hotels;
     private String timezone;
-    @JsonProperty(value = "image_url")
+    @JsonProperty("image_url")
     private String imageUrl;
     private String region;
     private String country;
-    @JsonProperty(value = "dest_id")
+    @JsonProperty("dest_id")
     private String destId;
     private Double longitude;
-    @JsonProperty(value = "landmark_type")
+    @JsonProperty("landmark_type")
     private Integer landmarkType;
     private Double latitude;
     private String label;
-    @JsonProperty(value = "city_name")
+    @JsonProperty("city_name")
     private String cityName;
-    @JsonProperty(value = "dest_type")
+    @JsonProperty("dest_type")
     private String destType;
-    @JsonProperty(value = "nr_hotels")
+    @JsonProperty("nr_hotels")
     private Integer nrHotels;
     private String name;
     private String type;
