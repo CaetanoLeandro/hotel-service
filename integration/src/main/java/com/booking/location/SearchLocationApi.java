@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 
 @AllArgsConstructor
 @Service
-public class SearchLocationApi {
+public class    SearchLocationApi {
 
     private final WebClient webClient;
 
