@@ -15,7 +15,7 @@ public class WebClientConfig {
                 .baseUrl("https://booking-com.p.rapidapi.com")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .defaultHeader("x-rapidapi-host", "booking-com.p.rapidapi.com")
-                .defaultHeader("x-rapidapi-key", "ecf770b382mshc04ae62c93fbcc3p194808jsnf3dfb855b376")
+                .defaultHeader("x-rapidapi-key", "4d2d008aa4mshc6fa0920d106076p1557fejsnadbec0d7bcf3")
                 .build();
     }
 }

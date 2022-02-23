@@ -15,9 +15,10 @@ public class LocationApi {
 
     public Flux<LocationIntegrationResponse> getLocation(LocationIntegrationRequest locationIntegrationRequest) {
         return webClient.get()
-                .uri(uriBuilder -> uriBuilder.path("v1/hotels/locations")
-                        .queryParam("Locale", locationIntegrationRequest.getLocale(),
-                                "name", locationIntegrationRequest.getName())
+                .uri(uriBuilder -> uriBuilder
+                        .path("v1/hotels/locations")
+                        .queryParam("locale", locationIntegrationRequest.getLocale())
+                        .queryParam("name", locationIntegrationRequest.getName())
                         .build())
                 .retrieve()
                 .bodyToFlux(LocationIntegrationResponse.class);
