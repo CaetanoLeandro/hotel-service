@@ -35,6 +35,16 @@ public class LocationController {
                 .build());
     }
 
+
+    @GetMapping("/location")
+    public Flux<SearchLocationResponse> get2(@RequestParam String name, @RequestHeader String locale) {
+        return locationService.find(
+                SearchLocationRequest.builder()
+                        .name(name)
+                        .locale(locale)
+                        .build());
+    }
+
     @GetMapping("/localizacao")
     public Flux<SearchLocationResponse> get(@RequestParam String name, @RequestHeader String locale) {
         return locationService.find(
