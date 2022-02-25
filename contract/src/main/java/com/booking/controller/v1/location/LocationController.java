@@ -36,7 +36,7 @@ public class LocationController {
     }
 
 
-    @GetMapping("/location")
+    @GetMapping("/hotels")
     public Flux<SearchLocationResponse> get2(@RequestParam String name, @RequestHeader String locale) {
         return locationService.find(
                 SearchLocationRequest.builder()
