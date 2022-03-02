@@ -1,10 +1,9 @@
 package com.booking.controller.v1.location;
 
 import com.booking.controller.v1.location.model.response.LocationResponse;
-import com.booking.apis.LocationService;
-import com.booking.apis.searchlocation.SearchLocationApi;
-import com.booking.apis.searchlocation.model.request.SearchLocationRequest;
-import com.booking.apis.searchlocation.model.response.SearchLocationResponse;
+import com.booking.location.model.request.LocationIntegrationRequest;
+import com.booking.location.model.response.LocationIntegrationResponse;
+import com.booking.service.LocationService;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,6 @@ import static org.springframework.http.HttpStatus.OK;
 public class LocationController {
 
     private final LocationService locationService;
-    private final SearchLocationApi searchLocationApi;
-
 
     @GetMapping
     @ResponseStatus(OK)
@@ -37,18 +34,18 @@ public class LocationController {
 
 
     @GetMapping("/hotels")
-    public Flux<SearchLocationResponse> get2(@RequestParam String name, @RequestHeader String locale) {
+    public Flux<LocationIntegrationResponse> get2(@RequestParam String name, @RequestHeader String locale) {
         return locationService.find(
-                SearchLocationRequest.builder()
+                LocationIntegrationRequest.builder()
                         .name(name)
                         .locale(locale)
                         .build());
     }
 
     @GetMapping("/localizacao")
-    public Flux<SearchLocationResponse> get(@RequestParam String name, @RequestHeader String locale) {
+    public Flux<LocationIntegrationResponse> get(@RequestParam String name, @RequestHeader String locale) {
         return locationService.find(
-                SearchLocationRequest.builder()
+                LocationIntegrationRequest.builder()
                         .name(name)
                         .locale(locale)
                         .build());
