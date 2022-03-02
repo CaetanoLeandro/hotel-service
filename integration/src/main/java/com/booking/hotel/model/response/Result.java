@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -29,5 +27,7 @@ public class Result {
     private String reviewScoreWord;
     @JsonProperty("unit_configuration_label")
     private String unitConfigurationLabel;
-    private List<PriceBreakDown> priceBreakDown;
+    @JsonProperty("price_breakdown")
+    private PriceBreakDown priceBreakDown;
+
 }
