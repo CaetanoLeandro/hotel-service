@@ -23,6 +23,7 @@ public class Result {
     private String address;
     @JsonProperty("review_score")
     private String reviewScore;
+    @JsonProperty("class")
     private Integer classHotel;
     @JsonProperty("review_score_word")
     private String reviewScoreWord;

@@ -2,6 +2,7 @@ package com.booking.controller.v1.hotel;
 
 import com.booking.hotel.model.request.HotelIntegrationRequest;
 import com.booking.hotel.model.response.HotelIntegrationResponse;
+import com.booking.hotel.model.response.Result;
 import com.booking.service.HotelService;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
@@ -19,20 +20,9 @@ public class HotelController {
 
     private final HotelService hotelService;
 
-    @GetMapping("/")
+    @GetMapping()
     @ResponseStatus(OK)
-    public Flux<HotelIntegrationResponse> getHotel(@RequestParam String destId, String destType ) {
-        return hotelService.find(HotelIntegrationRequest.builder()
-                        .checkoutDate("2022-08-06")
-                        .roomNumber(1)
-                        .filterByCurrency("AED")
-                        .destType("city")
-                        .locale("en-gb")
-                        .checkinDate("2022-08-05")
-                        .adultsNumber(2)
-                        .orderBy("popularity")
-                        .units("metric")
-                        .destId("-553173")
-                .build());
+    public Flux<HotelIntegrationResponse> getHotel(@RequestBody HotelIntegrationRequest hotelIntegrationRequest ) {
+        return hotelService.find(hotelIntegrationRequest);
     }
 }

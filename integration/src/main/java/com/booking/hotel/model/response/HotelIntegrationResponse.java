@@ -13,5 +13,5 @@ import java.util.List;
 @Data
 public class HotelIntegrationResponse {
 
-    private List<Result> results;
+    private List<Result> result;
 }

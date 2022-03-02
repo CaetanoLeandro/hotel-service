@@ -2,6 +2,7 @@ package com.booking.hotel;
 
 import com.booking.hotel.model.request.HotelIntegrationRequest;
 import com.booking.hotel.model.response.HotelIntegrationResponse;
+import com.booking.hotel.model.response.Result;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
