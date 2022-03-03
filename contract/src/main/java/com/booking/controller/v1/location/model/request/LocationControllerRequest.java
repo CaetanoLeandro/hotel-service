@@ -1,4 +1,4 @@
-package com.booking.location.model.request;
+package com.booking.controller.v1.location.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Builder
-public class LocationIntegrationRequest {
+public class LocationControllerRequest {
 
     private String locale;
     private String name;

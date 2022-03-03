@@ -1,17 +1,18 @@
-package com.booking.mapper.request;
+package com.booking.mapper.hotel.request;
 
-import com.booking.repository.model.request.HotelServiceRequest;
+import com.booking.hotel.model.request.HotelIntegrationRequest;
+import com.booking.service.hotel.model.request.HotelServiceRequest;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 import java.util.Optional;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class HotelServiceResquetMapper {
+public class HotelServiceRequestMapper {
 
-    /*public static HotelEntity toHotelEntity(HotelServiceRequest hotelServiceRequest) {
-        return Optional.ofNullable(hotelServiceRequest)
-                .map(hotelRequest -> HotelEntity.builder()
+    public static HotelServiceRequest toServiceRequest(HotelIntegrationRequest hotelIntegrationRequest) {
+        return Optional.ofNullable(hotelIntegrationRequest)
+                .map(hotelRequest -> HotelServiceRequest.builder()
                         .destId(hotelRequest.getDestId())
                         .roomNumber(hotelRequest.getRoomNumber())
                         .checkinDate(hotelRequest.getCheckinDate())
@@ -24,5 +25,5 @@ public class HotelServiceResquetMapper {
                         .units(hotelRequest.getUnits())
                         .build())
                 .orElse(null);
-    }*/
+    }
 }

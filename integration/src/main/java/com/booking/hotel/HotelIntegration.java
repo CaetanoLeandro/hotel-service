@@ -2,19 +2,18 @@ package com.booking.hotel;
 
 import com.booking.hotel.model.request.HotelIntegrationRequest;
 import com.booking.hotel.model.response.HotelIntegrationResponse;
-import com.booking.hotel.model.response.Result;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
+@Component
 @AllArgsConstructor
-@Service
 public class HotelIntegration {
 
     private final WebClient webClient;
 
-    public Flux<HotelIntegrationResponse> getHotels(HotelIntegrationRequest hotelIntegrationRequest) {
+    public Mono<HotelIntegrationResponse> getHotels(HotelIntegrationRequest hotelIntegrationRequest) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("v1/hotels/search")
@@ -30,6 +29,6 @@ public class HotelIntegration {
                         .queryParam("dest_id", hotelIntegrationRequest.getDestId())
                         .build())
                 .retrieve()
-                .bodyToFlux(HotelIntegrationResponse.class);
+                .bodyToMono(HotelIntegrationResponse.class);
     }
 }

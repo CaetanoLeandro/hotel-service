@@ -1,16 +1,18 @@
-package com.booking.location.model.request;
+package com.booking.service.hotel.model.response;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-public class LocationIntegrationRequest {
+@Data
+public class ResultResponse {
 
-    private String locale;
-    private String name;
+    List<HotelServiceResponse> result;
 }

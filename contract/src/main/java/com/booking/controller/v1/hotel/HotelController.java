@@ -1,13 +1,12 @@
 package com.booking.controller.v1.hotel;
 
-import com.booking.hotel.model.request.HotelIntegrationRequest;
-import com.booking.hotel.model.response.HotelIntegrationResponse;
-import com.booking.hotel.model.response.Result;
-import com.booking.service.HotelService;
+import com.booking.controller.v1.hotel.model.request.HotelControllerRequest;
+import com.booking.controller.v1.hotel.model.response.HotelControllerResponse;
+import com.booking.service.hotel.facade.HotelServiceFacade;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -18,11 +17,11 @@ import static org.springframework.http.HttpStatus.OK;
 @CrossOrigin("http://localhost")
 public class HotelController {
 
-    private final HotelService hotelService;
+    private final HotelServiceFacade hotelServiceFacade;
 
     @GetMapping()
     @ResponseStatus(OK)
-    public Flux<HotelIntegrationResponse> getHotel(@RequestBody HotelIntegrationRequest hotelIntegrationRequest ) {
-        return hotelService.find(hotelIntegrationRequest);
+    public Mono<HotelControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
+        return hotelServiceFacade.find(hotelControllerRequest);
     }
 }

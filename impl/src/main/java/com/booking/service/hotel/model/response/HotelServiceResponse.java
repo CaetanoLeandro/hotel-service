@@ -1,4 +1,4 @@
-package com.booking.repository.model.response;
+package com.booking.service.hotel.model.response;
 
 import com.booking.hotel.model.response.PriceBreakDown;
 import lombok.AllArgsConstructor;
@@ -23,6 +23,6 @@ public class HotelServiceResponse {
     private Integer classHotel;
     private String reviewScoreWord;
     private String unitConfigurationLabel;
-    private List<PriceBreakDown> priceBreakDown;
+    private PriceBreakDown priceBreakDown;
 
 }

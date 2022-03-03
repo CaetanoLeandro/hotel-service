@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 
-public class LocationResponse {
+public class LocationControllerResponse {
+
     private String destId;
     private String label;
     private String region;
     private String cityName;
     private String country;
-
 }

@@ -23,5 +23,5 @@ public class HotelControllerResponse {
     private Integer classHotel;
     private String reviewScoreWord;
     private String unitConfigurationLabel;
-    private List<PriceBreakDown> priceBreakDown;
+    private PriceBreakDown priceBreakDown;
 }
