@@ -22,7 +22,7 @@ public class PhotoController {
 
     @GetMapping
     @ResponseStatus(OK)
-    public Flux<PhotoResponse> getPhoto(@RequestParam Integer hotelId, @RequestParam String locale) {
+    public Flux<PhotoResponse> getPhoto(@RequestParam Integer hotelId, @RequestHeader String locale) {
         return photosService.find(PhotoRequest.builder()
                 .hotelId(hotelId)
                 .locale(locale)

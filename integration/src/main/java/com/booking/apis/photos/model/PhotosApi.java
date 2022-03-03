@@ -16,7 +16,7 @@ public class PhotosApi {
     public Flux<PhotoResponse> getPhotos(PhotoRequest photoRequest) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
-                        .path("")
+                        .path("v1/hotels/photos")
                         .queryParam("locale", photoRequest.getLocale())
                         .queryParam("hotel_id", photoRequest.getHotelId())
                         .build())
