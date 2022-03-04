@@ -19,7 +19,7 @@ public class LocationController {
 
     private final LocationControllerFacade locationControllerFacade;
 
-    @GetMapping()
+    /*@GetMapping()
     @ResponseStatus(OK)
     public Flux<LocationControllerResponse> get(@RequestParam String name, @RequestHeader String locale) {
         return locationControllerFacade.find(
@@ -27,5 +27,5 @@ public class LocationController {
                         .name(name)
                         .locale(locale)
                         .build());
-    }
+    }*/
 }

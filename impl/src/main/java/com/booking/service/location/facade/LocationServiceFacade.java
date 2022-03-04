@@ -13,10 +13,10 @@ public class LocationServiceFacade {
 
     private final LocationService locationService;
 
-    public Flux<LocationIntegrationResponse> find(LocationIntegrationRequest locationIntegrationRequest) {
+    /*public Flux<LocationIntegrationResponse> find(LocationIntegrationRequest locationIntegrationRequest) {
         return locationService.find(locationIntegrationRequest)
                 .map(mapper::metodoMapper);
-    }
+    }*/
 
 
 

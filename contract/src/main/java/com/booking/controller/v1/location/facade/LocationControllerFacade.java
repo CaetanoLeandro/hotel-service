@@ -13,8 +13,8 @@ public class LocationControllerFacade {
 
     private final LocationServiceFacade locationServiceFacade;
 
-    public Flux<LocationControllerResponse> find(LocationServiceRequest locationServiceRequest) {
+    /*public Flux<LocationControllerResponse> find(LocationServiceRequest locationServiceRequest) {
         return locationServiceFacade.find(locationServiceRequest)
                 .map(mapper::metodoMapper);
-    }
+    }*/
 }

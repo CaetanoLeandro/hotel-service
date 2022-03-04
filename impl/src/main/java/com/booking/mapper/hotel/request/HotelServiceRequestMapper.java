@@ -10,19 +10,19 @@ import java.util.Optional;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class HotelServiceRequestMapper {
 
-    public static HotelServiceRequest toServiceRequest(HotelIntegrationRequest hotelIntegrationRequest) {
-        return Optional.ofNullable(hotelIntegrationRequest)
-                .map(hotelRequest -> HotelServiceRequest.builder()
-                        .destId(hotelRequest.getDestId())
-                        .roomNumber(hotelRequest.getRoomNumber())
-                        .checkinDate(hotelRequest.getCheckinDate())
-                        .checkoutDate(hotelRequest.getCheckoutDate())
-                        .filterByCurrency(hotelRequest.getFilterByCurrency())
-                        .destType(hotelRequest.getDestType())
-                        .locale(hotelRequest.getLocale())
-                        .adultsNumber(hotelRequest.getAdultsNumber())
-                        .orderBy(hotelRequest.getOrderBy())
-                        .units(hotelRequest.getUnits())
+    public static HotelIntegrationRequest toHotelIntegrationRequest(HotelServiceRequest hotelServiceRequest) {
+        return Optional.ofNullable(hotelServiceRequest)
+                .map(hotelService -> HotelIntegrationRequest.builder()
+                        .destId(hotelService.getDestId())
+                        .roomNumber(hotelService.getRoomNumber())
+                        .checkinDate(hotelService.getCheckinDate())
+                        .checkoutDate(hotelService.getCheckoutDate())
+                        .filterByCurrency(hotelService.getFilterByCurrency())
+                        .destType(hotelService.getDestType())
+                        .locale(hotelService.getLocale())
+                        .adultsNumber(hotelService.getAdultsNumber())
+                        .orderBy(hotelService.getOrderBy())
+                        .units(hotelService.getUnits())
                         .build())
                 .orElse(null);
     }

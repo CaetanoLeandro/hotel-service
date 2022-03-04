@@ -1,5 +1,4 @@
-package com.booking.service.hotel.model.response;
-
+package com.booking.controller.v1.hotel.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Data
-public class ResultResponse {
+public class ResultControllerResponse {
 
-    List<HotelServiceResponse> result;
+    private List<HotelControllerResponse> result;
+
 }

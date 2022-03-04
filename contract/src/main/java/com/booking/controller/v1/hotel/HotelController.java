@@ -1,8 +1,8 @@
 package com.booking.controller.v1.hotel;
 
+import com.booking.controller.v1.hotel.facade.HotelControllerFacade;
 import com.booking.controller.v1.hotel.model.request.HotelControllerRequest;
-import com.booking.controller.v1.hotel.model.response.HotelControllerResponse;
-import com.booking.service.hotel.facade.HotelServiceFacade;
+import com.booking.controller.v1.hotel.model.response.ResultControllerResponse;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,11 +17,11 @@ import static org.springframework.http.HttpStatus.OK;
 @CrossOrigin("http://localhost")
 public class HotelController {
 
-    private final HotelServiceFacade hotelServiceFacade;
+    private final HotelControllerFacade hotelControllerFacade;
 
     @GetMapping()
     @ResponseStatus(OK)
-    public Mono<HotelControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
-        return hotelServiceFacade.find(hotelControllerRequest);
+    public Mono<ResultControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
+        return hotelControllerFacade.find(hotelControllerRequest);
     }
 }
