@@ -18,10 +18,10 @@ import static org.springframework.http.HttpStatus.OK;
 public class HotelController {
 
     private final HotelServiceFacade hotelServiceFacade;
-
-    @GetMapping()
-    @ResponseStatus(OK)
-    public Mono<HotelControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
-        return hotelServiceFacade.find(hotelControllerRequest);
-    }
+// Todo
+//    @GetMapping()
+//    @ResponseStatus(OK)
+//    public Mono<HotelControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
+//        return hotelServiceFacade.find(hotelControllerRequest);
+//    }
 }

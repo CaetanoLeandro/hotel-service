@@ -19,9 +19,9 @@ import static com.booking.mapper.hotel.request.HotelServiceRequestMapper.toServi
 public class HotelService {
 
     private final HotelIntegration hotelIntegration;
-
-    public Mono<HotelServiceResponse> find(HotelIntegrationRequest hotelIntegrationRequest) {
-        return hotelIntegration.getHotels(hotelIntegrationRequest)
-                .map(HotelServiceResponseMapper::toServiceResponse);
-    }
+// todo
+//    public Mono<HotelServiceResponse> find(HotelIntegrationRequest hotelIntegrationRequest) {
+//        return hotelIntegration.getHotels(hotelIntegrationRequest)
+//                .map(HotelServiceResponseMapper::toServiceResponse);
+//    }
 }

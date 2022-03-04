@@ -1,6 +1,5 @@
 package com.booking.controller.v1.hotel.model.response;
 
-import com.booking.hotel.model.response.PriceBreakDown;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +22,6 @@ public class HotelControllerResponse {
     private Integer classHotel;
     private String reviewScoreWord;
     private String unitConfigurationLabel;
-    private PriceBreakDown priceBreakDown;
+    // todo
+//    private PriceBreakDown priceBreakDown;
 }

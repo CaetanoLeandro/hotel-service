@@ -12,8 +12,8 @@ import reactor.core.publisher.Mono;
 public class HotelServiceFacade {
 
     private final HotelService hotelService;
-
-    public Mono<HotelServiceResponse> find(HotelIntegrationRequest hotelIntegrationRequest) {
-        return hotelService.find(hotelIntegrationRequest);
-    }
+// todo
+//    public Mono<HotelServiceResponse> find(HotelIntegrationRequest hotelIntegrationRequest) {
+//        return hotelService.find(hotelIntegrationRequest);
+//    }
 }

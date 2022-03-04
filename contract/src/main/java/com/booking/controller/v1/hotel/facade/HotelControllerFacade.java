@@ -12,9 +12,9 @@ import reactor.core.publisher.Mono;
 public class HotelControllerFacade {
 
     private final HotelServiceFacade hotelServiceFacade;
-
-    public Mono<HotelControllerResponse> find(HotelServiceRequest hotelServiceRequest) {
-        return hotelServiceFacade.find(hotelServiceRequest)
-                .map(mapper::metodoMapper);
-    }
+// todo
+//    public Mono<HotelControllerResponse> find(HotelServiceRequest hotelServiceRequest) {
+//        return hotelServiceFacade.find(hotelServiceRequest)
+//                .map(mapper::metodoMapper);
+//    }
 }

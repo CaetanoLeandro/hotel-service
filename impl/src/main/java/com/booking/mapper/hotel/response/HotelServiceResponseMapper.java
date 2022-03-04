@@ -12,14 +12,14 @@ import java.util.Optional;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class HotelServiceResponseMapper {
-
-    public static ResultResponse mapperToHotelService(HotelIntegrationResponse hotelIntegrationResponse){
-        return Optional.ofNullable(hotelIntegrationResponse)
-                .map(hotel -> ResultResponse.builder()
-                        .result()
-                        .build())
-                .orElse(null);
-    }
+//
+//    public static ResultResponse mapperToHotelService(HotelIntegrationResponse hotelIntegrationResponse){
+//        return Optional.ofNullable(hotelIntegrationResponse)
+//                .map(hotel -> ResultResponse.builder()
+//                        .result()
+//                        .build())
+//                .orElse(null);
+//    }
 
     public static List<HotelServiceResponse> toServiceResponseList(List<Result> result) {
         return Optional.ofNullable(result)
