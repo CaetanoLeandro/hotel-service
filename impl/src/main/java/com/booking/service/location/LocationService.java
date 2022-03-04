@@ -11,10 +11,10 @@ import reactor.core.publisher.Flux;
 @AllArgsConstructor
 public class LocationService {
 
-    private final LocationIntegration locationApi;
+    private final LocationIntegration locationIntegration;
 
-    public Flux<LocationIntegrationResponse> find(LocationIntegrationRequest searchLocationRequest) {
-        return locationApi.getLocation(searchLocationRequest);
+    public Flux<LocationIntegrationResponse> find(LocationIntegrationRequest locationIntegrationRequest) {
+        return locationIntegration.getLocation(locationIntegrationRequest);
     }
 
 }
