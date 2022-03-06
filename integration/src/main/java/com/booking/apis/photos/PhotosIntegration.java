@@ -1,4 +1,4 @@
-package com.booking.apis.photos.model;
+package com.booking.apis.photos;
 
 import com.booking.apis.photos.model.request.PhotoRequest;
 import com.booking.apis.photos.model.response.PhotoResponse;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 
 @AllArgsConstructor
 @Component
-public class PhotosApi {
+public class PhotosIntegration {
 
     private final WebClient webClient;
 

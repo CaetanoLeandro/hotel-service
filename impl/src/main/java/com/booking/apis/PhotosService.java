@@ -1,6 +1,6 @@
 package com.booking.apis;
 
-import com.booking.apis.photos.model.PhotosApi;
+import com.booking.apis.photos.PhotosIntegration;
 import com.booking.apis.photos.model.request.PhotoRequest;
 import com.booking.apis.photos.model.response.PhotoResponse;
 import lombok.AllArgsConstructor;
@@ -11,9 +11,9 @@ import reactor.core.publisher.Flux;
 @AllArgsConstructor
 public class PhotosService {
 
-    private final PhotosApi photosApi;
+    private final PhotosIntegration photosIntegration;
 
     public Flux<PhotoResponse> find(PhotoRequest photoRequest){
-        return photosApi.getPhotos(photoRequest);
+        return photosIntegration.getPhotos(photoRequest);
     }
 }
