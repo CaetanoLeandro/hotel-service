@@ -1,10 +1,8 @@
 package com.booking.controller.v1.location;
 
-import com.booking.controller.v1.location.model.response.LocationResponse;
-import com.booking.apis.LocationService;
-import com.booking.apis.searchlocation.SearchLocationApi;
-import com.booking.apis.searchlocation.model.request.SearchLocationRequest;
-import com.booking.apis.searchlocation.model.response.SearchLocationResponse;
+import com.booking.controller.v1.location.facade.LocationControllerFacade;
+import com.booking.controller.v1.location.model.request.LocationControllerRequest;
+import com.booking.controller.v1.location.model.response.LocationControllerResponse;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,28 +17,15 @@ import static org.springframework.http.HttpStatus.OK;
 @CrossOrigin("http://localhost")
 public class LocationController {
 
-    private final LocationService locationService;
-    private final SearchLocationApi searchLocationApi;
+    private final LocationControllerFacade locationControllerFacade;
 
-
-    @GetMapping
+    @GetMapping()
     @ResponseStatus(OK)
-    public Flux<LocationResponse> getAddress(@RequestParam String name, @RequestHeader String locale) {
-        return Flux.just(LocationResponse.builder()
-                .destId("id")
-                .cityName("Poa")
-                .country("Brasil")
-                .region("Sul")
-                .label("Sul")
-                .build());
-    }
-
-    @GetMapping("/localizacao")
-    public Flux<SearchLocationResponse> get(@RequestParam String name, @RequestHeader String locale) {
-        return locationService.find(
-                SearchLocationRequest.builder()
+        public Flux<LocationControllerResponse> getLocation(@RequestParam String name, @RequestHeader String locale) {
+        return locationControllerFacade.find(LocationControllerRequest.builder()
                         .name(name)
                         .locale(locale)
                         .build());
     }
+
 }

@@ -1,8 +1,8 @@
 package com.booking.apis;
 
-import com.booking.apis.photos.PhotosIntegration;
-import com.booking.apis.photos.model.request.PhotoRequest;
-import com.booking.apis.photos.model.response.PhotoResponse;
+import com.booking.photos.PhotosIntegration;
+import com.booking.photos.model.request.PhotoRequest;
+import com.booking.photos.model.response.PhotoResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

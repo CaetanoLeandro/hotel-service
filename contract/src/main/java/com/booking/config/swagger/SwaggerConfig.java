@@ -1,8 +1,4 @@
-<<<<<<< HEAD:contract/src/main/java/com/booking/controller/v1/SwaggerConfig.java
-package com.booking.controller.v1;
-=======
 package com.booking.config.swagger;
->>>>>>> 3-criar-integracao-com-webclient-para-consumir-a-api-externa-hotel-search:contract/src/main/java/com/booking/config/swagger/SwaggerConfig.java
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

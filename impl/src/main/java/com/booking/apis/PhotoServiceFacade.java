@@ -1,7 +1,7 @@
 package com.booking.apis;
 
-import com.booking.apis.photos.model.request.PhotoRequest;
-import com.booking.apis.photos.model.response.PhotoResponse;
+import com.booking.photos.model.request.PhotoRequest;
+import com.booking.photos.model.response.PhotoResponse;
 import lombok.AllArgsConstructor;
 import reactor.core.publisher.Flux;
 
