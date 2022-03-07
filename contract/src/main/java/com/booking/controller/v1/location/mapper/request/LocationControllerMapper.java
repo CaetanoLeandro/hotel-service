@@ -1,4 +1,4 @@
-package com.booking.controller.v1.mapper.request;
+package com.booking.controller.v1.location.mapper.request;
 
 import com.booking.controller.v1.location.model.request.LocationControllerRequest;
 import com.booking.controller.v1.location.model.response.LocationControllerResponse;

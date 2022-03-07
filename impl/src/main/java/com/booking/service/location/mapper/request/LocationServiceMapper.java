@@ -1,4 +1,4 @@
-package com.booking.mapper.location.request;
+package com.booking.service.location.mapper.request;
 
 
 import com.booking.location.model.request.LocationIntegrationRequest;

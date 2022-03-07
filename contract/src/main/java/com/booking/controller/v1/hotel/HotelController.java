@@ -6,7 +6,7 @@ import com.booking.controller.v1.hotel.model.response.ResultControllerResponse;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
 import static org.springframework.http.HttpStatus.OK;
 
@@ -21,7 +21,7 @@ public class HotelController {
 
     @GetMapping()
     @ResponseStatus(OK)
-    public Mono<ResultControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
+    public Flux<ResultControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
         return hotelControllerFacade.find(hotelControllerRequest);
     }
 }

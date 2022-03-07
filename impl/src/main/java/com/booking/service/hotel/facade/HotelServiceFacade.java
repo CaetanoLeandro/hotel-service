@@ -5,9 +5,9 @@ import com.booking.service.hotel.model.request.HotelServiceRequest;
 import com.booking.service.hotel.model.response.ResultServiceResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
-import static com.booking.mapper.hotel.request.HotelServiceRequestMapper.toHotelIntegrationRequest;
+import static com.booking.service.hotel.mapper.request.HotelServiceRequestMapper.toHotelIntegrationRequest;
 
 @Component
 @AllArgsConstructor
@@ -15,7 +15,7 @@ public class HotelServiceFacade {
 
     private final HotelService hotelService;
 
-    public Mono<ResultServiceResponse> find(HotelServiceRequest hotelServiceRequest) {
+    public Flux<ResultServiceResponse> find(HotelServiceRequest hotelServiceRequest) {
         return hotelService.find(toHotelIntegrationRequest(hotelServiceRequest));
     }
 }

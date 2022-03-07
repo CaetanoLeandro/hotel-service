@@ -1,3 +1,4 @@
 dependencies{
     implementation project(':integration')
+    implementation project(':common')
 }

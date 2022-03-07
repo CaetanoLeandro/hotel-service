@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
-public class Result {
+public class ResultIntegration {
     @JsonProperty("hotel_include_breakfast")
     private Boolean hotelIncludeBreakfast;
     @JsonProperty("hotel_name")
@@ -28,6 +28,6 @@ public class Result {
     @JsonProperty("unit_configuration_label")
     private String unitConfigurationLabel;
     @JsonProperty("price_breakdown")
-    private PriceBreakDown priceBreakDown;
+    private PriceBreakDownIntegration priceBreakDown;
 
 }

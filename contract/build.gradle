@@ -1,4 +1,4 @@
 dependencies{
     implementation project(':impl')
-    implementation project(':integration')
+    implementation project(':common')
 }

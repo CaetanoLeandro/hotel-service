@@ -13,6 +13,6 @@ import java.util.List;
 @Data
 public class HotelIntegrationResponse {
 
-    private List<Result> result;
+    private List<ResultIntegration> result;
 
 }
