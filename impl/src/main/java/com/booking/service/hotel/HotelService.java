@@ -30,7 +30,6 @@ public class HotelService {
                                 .currency(resultIntegration.getPriceBreakDown().getCurrency())
                                 .sumeXcludedraw(resultIntegration.getPriceBreakDown().getSumeXcludedraw())
                                 .hasinCalculableCharges(resultIntegration.getPriceBreakDown().getHasinCalculableCharges())
-                                .build())
-                );
+                                .build()));
     }
 }

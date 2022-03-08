@@ -26,5 +26,4 @@ public class HotelServiceRequestMapper {
                         .build())
                 .orElse(null);
     }
-
 }

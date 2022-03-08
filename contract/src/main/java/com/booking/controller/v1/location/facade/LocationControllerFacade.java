@@ -1,8 +1,8 @@
 package com.booking.controller.v1.location.facade;
 
+import com.booking.controller.v1.location.mapper.request.LocationControllerMapper;
 import com.booking.controller.v1.location.model.request.LocationControllerRequest;
 import com.booking.controller.v1.location.model.response.LocationControllerResponse;
-import com.booking.controller.v1.location.mapper.request.LocationControllerMapper;
 import com.booking.service.location.facade.LocationServiceFacade;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

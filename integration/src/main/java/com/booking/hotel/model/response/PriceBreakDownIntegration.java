@@ -19,5 +19,4 @@ public class PriceBreakDownIntegration {
     private Double sumeXcludedraw;
     @JsonProperty("has_incalculable_charges")
     private Integer hasinCalculableCharges;
-
 }

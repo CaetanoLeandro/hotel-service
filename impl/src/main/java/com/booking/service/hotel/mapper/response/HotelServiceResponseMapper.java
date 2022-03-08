@@ -34,5 +34,4 @@ public class HotelServiceResponseMapper {
                 .hasinCalculableCharges(priceBreakDownIntegration.getHasinCalculableCharges())
                 .build();
     }
-
 }

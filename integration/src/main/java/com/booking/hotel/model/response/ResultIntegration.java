@@ -29,5 +29,4 @@ public class ResultIntegration {
     private String unitConfigurationLabel;
     @JsonProperty("price_breakdown")
     private PriceBreakDownIntegration priceBreakDown;
-
 }

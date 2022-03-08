@@ -9,7 +9,12 @@ import reactor.core.publisher.Flux;
 
 @Component
 @AllArgsConstructor
+<<<<<<< HEAD:integration/src/main/java/com/booking/location/LocationIntegration.java
 public class LocationIntegration {
+=======
+@Service
+public class SearchLocationApi {
+>>>>>>> staging:integration/src/main/java/com/booking/apis/searchlocation/SearchLocationApi.java
 
     private final WebClient webClient;
 
