@@ -21,5 +21,4 @@ public class HotelServiceRequest {
     private Integer adultsNumber;
     private String orderBy;
     private String units;
-
 }

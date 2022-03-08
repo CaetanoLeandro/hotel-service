@@ -4,7 +4,6 @@ import com.booking.controller.v1.hotel.mapper.response.HotelControllerResponseMa
 import com.booking.controller.v1.hotel.model.request.HotelControllerRequest;
 import com.booking.controller.v1.hotel.model.response.ResultControllerResponse;
 import com.booking.service.hotel.facade.HotelServiceFacade;
-import com.booking.service.hotel.mapper.response.HotelServiceResponseMapper;
 import com.booking.service.hotel.model.response.PriceBreakDownService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -22,11 +21,10 @@ public class HotelControllerFacade {
         return hotelServiceFacade.find(mapperHotelToService(hotelControllerRequest))
                 .map(resultServiceResponse ->
                         HotelControllerResponseMapper.mapToResultResponse(resultServiceResponse, PriceBreakDownService.builder()
-                                        .grossPrice(resultServiceResponse.getPriceBreakDown().getGrossPrice())
-                                        .currency(resultServiceResponse.getPriceBreakDown().getCurrency())
-                                        .sumeXcludedraw(resultServiceResponse.getPriceBreakDown().getSumeXcludedraw())
-                                        .hasinCalculableCharges(resultServiceResponse.getPriceBreakDown().getHasinCalculableCharges())
+                                .grossPrice(resultServiceResponse.getPriceBreakDown().getGrossPrice())
+                                .currency(resultServiceResponse.getPriceBreakDown().getCurrency())
+                                .sumeXcludedraw(resultServiceResponse.getPriceBreakDown().getSumeXcludedraw())
+                                .hasinCalculableCharges(resultServiceResponse.getPriceBreakDown().getHasinCalculableCharges())
                                 .build()));
     }
-
 }

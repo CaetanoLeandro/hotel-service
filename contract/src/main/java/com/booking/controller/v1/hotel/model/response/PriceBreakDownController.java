@@ -16,5 +16,4 @@ public class PriceBreakDownController {
     private Currency currency;
     private Double sumeXcludedraw;
     private Integer hasinCalculableCharges;
-
 }

@@ -1,9 +1,7 @@
 package com.booking.controller.v1.hotel.mapper.request;
 
 import com.booking.controller.v1.hotel.model.request.HotelControllerRequest;
-import com.booking.controller.v1.hotel.model.response.PriceBreakDownController;
 import com.booking.service.hotel.model.request.HotelServiceRequest;
-import com.booking.service.hotel.model.response.PriceBreakDownService;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -28,5 +26,4 @@ public class HotelControllerRequestMapper {
                         .build())
                 .orElse(null);
     }
-
 }

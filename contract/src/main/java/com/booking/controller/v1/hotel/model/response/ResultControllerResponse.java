@@ -21,5 +21,4 @@ public class ResultControllerResponse {
     private String reviewScoreWord;
     private String unitConfigurationLabel;
     private PriceBreakDownController priceBreakDown;
-
 }

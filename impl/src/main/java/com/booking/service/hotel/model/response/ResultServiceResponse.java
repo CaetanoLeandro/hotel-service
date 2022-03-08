@@ -1,7 +1,6 @@
 package com.booking.service.hotel.model.response;
 
 
-import com.booking.hotel.model.response.PriceBreakDownIntegration;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -25,12 +25,12 @@ public class HotelService {
                 .map(HotelIntegrationResponse::getResult)
                 .flatMapMany((List<ResultIntegration> results) -> Flux.fromStream(results.stream()))
                 .map(resultIntegration ->
-                    HotelServiceResponseMapper.mapToResultResponse(resultIntegration, PriceBreakDownIntegration.builder()
-                                    .grossPrice(resultIntegration.getPriceBreakDown().getGrossPrice())
-                                    .currency(resultIntegration.getPriceBreakDown().getCurrency())
-                                    .sumeXcludedraw(resultIntegration.getPriceBreakDown().getSumeXcludedraw())
-                                    .hasinCalculableCharges(resultIntegration.getPriceBreakDown().getHasinCalculableCharges())
-                            .build())
+                        HotelServiceResponseMapper.mapToResultResponse(resultIntegration, PriceBreakDownIntegration.builder()
+                                .grossPrice(resultIntegration.getPriceBreakDown().getGrossPrice())
+                                .currency(resultIntegration.getPriceBreakDown().getCurrency())
+                                .sumeXcludedraw(resultIntegration.getPriceBreakDown().getSumeXcludedraw())
+                                .hasinCalculableCharges(resultIntegration.getPriceBreakDown().getHasinCalculableCharges())
+                                .build())
                 );
     }
 }
