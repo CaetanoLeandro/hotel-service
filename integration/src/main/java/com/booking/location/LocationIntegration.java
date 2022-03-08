@@ -4,17 +4,13 @@ import com.booking.location.model.request.LocationIntegrationRequest;
 import com.booking.location.model.response.LocationIntegrationResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 
 @Component
 @AllArgsConstructor
-<<<<<<< HEAD:integration/src/main/java/com/booking/location/LocationIntegration.java
 public class LocationIntegration {
-=======
-@Service
-public class SearchLocationApi {
->>>>>>> staging:integration/src/main/java/com/booking/apis/searchlocation/SearchLocationApi.java
 
     private final WebClient webClient;
 
