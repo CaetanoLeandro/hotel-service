@@ -9,6 +9,10 @@ mainClassName='com.booking.HotelServiceApplication'
 
 dependencies{
 	implementation project(':contract')
+	testImplementation project(':contract')
+	testImplementation project(':impl')
+	testImplementation project(':integration')
+	testImplementation project(':common')
 }
 
 allprojects {
