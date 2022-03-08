@@ -1,6 +1,6 @@
 package com.booking.controller.v1.location.facade;
 
-import com.booking.controller.v1.location.mapper.request.LocationControllerMapper;
+import com.booking.controller.v1.location.mapper.response.LocationControllerResponseMapper;
 import com.booking.controller.v1.location.model.request.LocationControllerRequest;
 import com.booking.controller.v1.location.model.response.LocationControllerResponse;
 import com.booking.service.location.facade.LocationServiceFacade;
@@ -18,7 +18,6 @@ public class LocationControllerFacade {
 
     public Flux<LocationControllerResponse> find(LocationControllerRequest locationControllerRequest) {
         return locationServiceFacade.find(toLocationControllerRequest(locationControllerRequest))
-                .map(LocationControllerMapper::toLocationControllerResponse);
+                .map(LocationControllerResponseMapper::toLocationControllerResponse);
     }
-
 }

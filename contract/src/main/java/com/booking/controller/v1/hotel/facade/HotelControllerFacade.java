@@ -20,11 +20,13 @@ public class HotelControllerFacade {
     public Flux<ResultControllerResponse> find(HotelControllerRequest hotelControllerRequest) {
         return hotelServiceFacade.find(mapperHotelToService(hotelControllerRequest))
                 .map(resultServiceResponse ->
-                        HotelControllerResponseMapper.mapToResultResponse(resultServiceResponse, PriceBreakDownService.builder()
-                                .grossPrice(resultServiceResponse.getPriceBreakDown().getGrossPrice())
-                                .currency(resultServiceResponse.getPriceBreakDown().getCurrency())
-                                .sumeXcludedraw(resultServiceResponse.getPriceBreakDown().getSumeXcludedraw())
-                                .hasinCalculableCharges(resultServiceResponse.getPriceBreakDown().getHasinCalculableCharges())
-                                .build()));
+                        HotelControllerResponseMapper.mapToResultResponse(resultServiceResponse,
+                                PriceBreakDownService.builder()
+                                        .grossPrice(resultServiceResponse.getPriceBreakDown().getGrossPrice())
+                                        .currency(resultServiceResponse.getPriceBreakDown().getCurrency())
+                                        .sumeXcludedraw(resultServiceResponse.getPriceBreakDown().getSumeXcludedraw())
+                                        .hasinCalculableCharges(
+                                                resultServiceResponse.getPriceBreakDown().getHasinCalculableCharges())
+                                        .build()));
     }
 }

@@ -21,11 +21,10 @@ public class LocationController {
 
     @GetMapping()
     @ResponseStatus(OK)
-        public Flux<LocationControllerResponse> getLocation(@RequestParam String name, @RequestHeader String locale) {
+    public Flux<LocationControllerResponse> getLocation(@RequestParam String name, @RequestHeader String locale) {
         return locationControllerFacade.find(LocationControllerRequest.builder()
-                        .name(name)
-                        .locale(locale)
-                        .build());
+                .name(name)
+                .locale(locale)
+                .build());
     }
-
 }

@@ -16,5 +16,4 @@ public class LocationService {
     public Flux<LocationIntegrationResponse> find(LocationIntegrationRequest locationIntegrationRequest) {
         return locationIntegration.getLocation(locationIntegrationRequest);
     }
-
 }
