@@ -13,7 +13,7 @@ import static org.springframework.http.HttpStatus.OK;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/v1/location")
-@Api("Hotels and Towns")
+@Api("Locations")
 @CrossOrigin("http://localhost")
 public class LocationController {
 
@@ -21,11 +21,10 @@ public class LocationController {
 
     @GetMapping()
     @ResponseStatus(OK)
-        public Flux<LocationControllerResponse> getLocation(@RequestParam String name, @RequestHeader String locale) {
+    public Flux<LocationControllerResponse> getLocation(@RequestParam String name, @RequestHeader String locale) {
         return locationControllerFacade.find(LocationControllerRequest.builder()
-                        .name(name)
-                        .locale(locale)
-                        .build());
+                .name(name)
+                .locale(locale)
+                .build());
     }
-
 }

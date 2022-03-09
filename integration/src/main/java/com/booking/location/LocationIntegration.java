@@ -4,6 +4,7 @@ import com.booking.location.model.request.LocationIntegrationRequest;
 import com.booking.location.model.response.LocationIntegrationResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 
