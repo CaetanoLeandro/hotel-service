@@ -21,7 +21,23 @@ public class HotelController {
 
     @GetMapping()
     @ResponseStatus(OK)
-    public Flux<ResultControllerResponse> getHotel(@RequestBody HotelControllerRequest hotelControllerRequest) {
-        return hotelControllerFacade.find(hotelControllerRequest);
+    public Flux<ResultControllerResponse> getHotel(@RequestParam Integer roomNumber, @RequestParam String checkoutDate,
+                                                   @RequestParam String filterByCurrency, @RequestParam String destType,
+                                                   @RequestParam String locale, @RequestParam String checkinDate,
+                                                   @RequestParam Integer adultsNumber, @RequestParam String orderBy,
+                                                   @RequestParam String units, @RequestParam String destId) {
+        return hotelControllerFacade.find(HotelControllerRequest.builder()
+                .roomNumber(roomNumber)
+                .checkoutDate(checkoutDate)
+                .adultsNumber(adultsNumber)
+                .filterByCurrency(filterByCurrency)
+                .destType(destType)
+                .locale(locale)
+                .checkinDate(checkinDate)
+                .orderBy(orderBy)
+                .units(units)
+                .destId(destId)
+                .build());
     }
+
 }
